@@ -7,4 +7,4 @@ A simple utility for getting & verifying file hashes.
 - VirusTotal search
 
 # Notes
-This program requires PowerShell and is meant to be run on Windows (in my testing, it doesn't work on Linux as i used WPF for the UI).
+This program requires PowerShell and **is meant to be run on Windows** *(in my testing, it doesn't work on Linux as i used WPF for the UI).*
