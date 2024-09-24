@@ -1,4 +1,15 @@
-# HashGeek
+<h1 align = 'center'>
+    <img 
+        src = '/assets/icon.png' 
+        height = '320'
+        width = '320'
+        alt = '' 
+    >
+    <br>
+    HashGeek
+    <br>
+</h1>
+
 A simple utility for getting & verifying file hashes.
 
 # Features
