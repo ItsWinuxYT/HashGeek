@@ -1,0 +1,45 @@
+<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Winux HashGeek" Height="218" Width="562" ResizeMode="NoResize">
+    <Grid Background="#FF202020"> <!-- Replaced #FF202020 with #BackgroundColor in ui.xaml -->
+        <Rectangle HorizontalAlignment="Left" Height="48" Margin="9,70,0,0" Stroke="Black" VerticalAlignment="Top" Width="528"/>
+        <Rectangle HorizontalAlignment="Left" Height="69" Margin="9,1,0,0" Stroke="Black" VerticalAlignment="Top" Width="528"/>
+
+        <!-- The "Background" & "Foreground" properties are added in ui.xaml -->
+        <TextBox Name="ExpectedHash" HorizontalAlignment="Left" Margin="188,83,0,0" VerticalAlignment="Top" Width="206" AllowDrop="False" Height="23"/>
+        <TextBox Name="InputHash"    HorizontalAlignment="Left" Margin="218,35,0,0" VerticalAlignment="Top" Width="173" AllowDrop="False"/>
+
+        <ComboBox Name="HashType" HorizontalAlignment="Left" Margin="407,29,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" FontSize="16">
+            <ComboBoxItem Content="SHA1"/>
+            <ComboBoxItem Content="SHA256"/>
+            <ComboBoxItem Content="SHA384"/>
+            <ComboBoxItem Content="SHA512"/>
+            <ComboBoxItem Content="MD5"/>
+        </ComboBox>
+
+        <!-- The "Background" & "Foreground" properties are added in ui.xaml -->
+        <Button Name="SelectFile"  Content="Select Target File"  HorizontalAlignment="Left"   Margin="18,11,0,0"    VerticalAlignment="Top"   FontSize="22"   Width="185"   Height="49"/>
+        <Button Name="VerifyHash"  Content="Verify!"             HorizontalAlignment="Left"   Margin="407,79,0,0"   VerticalAlignment="Top"   FontSize="18"   Width="120"/>
+        <Button Name="VT"          Content="Search on VT"        HorizontalAlignment="Left"   Margin="16,130,0,0"   VerticalAlignment="Top"   FontSize="18"   Width="127"/>
+        <Button Name="Triage"      Content="Open Tria.ge"        HorizontalAlignment="Left"   Margin="153,130,0,0"  VerticalAlignment="Top"   FontSize="18"   Width="120"/>
+        <Button Name="GitHub"      Content="GitHub"              HorizontalAlignment="Left"   Margin="326,130,0,0"  VerticalAlignment="Top"   FontSize="18"   Width="72"/>
+
+        <!-- The "Foreground" property is added in ui.xaml -->
+        <Label Content="or enter a checksum (hash)"  HorizontalAlignment="Left"   Margin="216,4,0,0"    VerticalAlignment="Top"   RenderTransformOrigin="0.479,-0.268" FontSize="14"/>
+        <Label Content="Expected checksum/hash:"     HorizontalAlignment="Left"   Margin="16,80,0,0"    VerticalAlignment="Top"   RenderTransformOrigin="0.479,-0.268" FontSize="14"/>
+        <Label Content="Checksum/Hash Type"          HorizontalAlignment="Left"   Margin="405,1,0,0"    VerticalAlignment="Top"/>
+        <Label Content="HashGeek v1.0 Stable"        HorizontalAlignment="Left"   Margin="403,125,0,0"  VerticalAlignment="Top"   Height="24" FontWeight="Bold"/>
+        <Label Content="Made by Winux"               HorizontalAlignment="Left"   Margin="443,143,0,0"  VerticalAlignment="Top"   Width="94" FontStyle="Italic"/>
+
+        <!-- PROGRESS BAR -->
+        <Label Name="ProgBarLabel" Content="Computing hash..." Width="200" Height="43" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0" Visibility="Hidden"/>
+        <TextBlock   Name="ProgBarDesc" TextWrapping="Wrap" Text="This might take a while (depending on the size of the file)." Height="36" Width="200" Foreground="White" TextAlignment="Center" FontStyle="Italic" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,110,0,0" Visibility="Hidden"/>
+        <Rectangle   Name="ProgBarBg" Height="218" Width="562" Fill="#FF202020" HorizontalAlignment="Center" VerticalAlignment="Top" Stroke="White" Margin="0,-14,0,0" Visibility="Hidden"/>
+        <ProgressBar Name="ProgBar" Height="27" Width="270" IsTabStop="False" Maximum="10" IsIndeterminate="True" Foreground="#FF059800" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,79,0,0" Visibility="Hidden"/>
+        <!-- PROGRESS BAR -->
+    </Grid>
+</Window>
